@@ -2,7 +2,11 @@
 
 ## Introduction
 
-TBD
+Lignaj is a useful tool when working on movie dubbing.  
+The tool will take a directory containing a list of files, one for each chapter.  
+Each chapter has a list of characters with how many lines of text they are speaking.  
+
+The output will be a csv file with the name of the character and the total number of lines across all chapters.
 
 ## Basic Usage
 
@@ -32,10 +36,19 @@ make install
 Once the utility is installed you can run it to convert all files in directory.  
 The first argument will the directory containing the files.
 ```bash
-lignaj .
+lignaj -i . -o output.csv
 ```
 
-TBD
+The flag `-i` is used to indicate the input directory, which contains the files to process.  
+The flag `-o` is used to indicate the output file.
+
+The output file will have a similar structure:
+```csv
+Anv,Niver
+Michael Scott,42
+Dwight Schrute,13
+Jim Halpert,5
+```
 
 ## Contributing
 
